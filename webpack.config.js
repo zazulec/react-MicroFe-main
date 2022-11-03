@@ -23,7 +23,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       templateContent: `
-    <html>
+    <html lang="en">
       <body>
         <div id="root"></div>
       </body>
@@ -33,7 +33,9 @@ const config = {
     new ModuleFederationPlugin({
       name: 'main',
       filename: 'remoteEntry.js',
-      remotes: { nav:'nav@http://localhost:3001/remoteEntry.js'},
+      remotes: {
+        navMF:'navMF@http://localhost:3001/remoteEntry.js'
+      },
       exposes: {}
     }),
     // Add your plugins here
