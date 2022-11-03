@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import {lazy} from "react";
+
+const NavTestComponent = lazy(() => import('nav/Components.js'))
+const NavTestComponentTwo = lazy(() => import('nav/ComponentTwo.js'))
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavTestComponent />
+        <NavTestComponentTwo/>
+    main content
     </div>
   );
 }
