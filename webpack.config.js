@@ -34,7 +34,8 @@ const config = {
       name: 'main',
       filename: 'remoteEntry.js',
       remotes: {
-        navMF:'navMF@http://localhost:3001/remoteEntry.js'
+        navMF:'navMF@http://localhost:3001/remoteEntry.js',
+        heroMF: 'heroMF@http://localhost:5173/remoteEntry.js'
       },
       exposes: {}
     }),
@@ -63,7 +64,7 @@ const config = {
   optimization: {
     sideEffects: false,
     moduleIds: 'named',
-    chunkIds: 'named'
+    chunkIds: 'named',
   }
 };
 
